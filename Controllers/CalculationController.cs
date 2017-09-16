@@ -17,7 +17,7 @@ namespace TimeTrackingServer.Controllers
         {
             using (TimeTrackingDBContext context = new TimeTrackingDBContext())
             {
-                 var result = new CalculationResult();
+                var result = new CalculationResult();
                 
                 // Get Calculation Config for Current User 
                 var config = await context.Calculation.Where(a => a.userId == userid).SingleOrDefaultAsync();
@@ -39,10 +39,7 @@ namespace TimeTrackingServer.Controllers
 
                 result.employerExpenses = result.income * config.employerDuties;
 
-                
-
-
-                
+                return null;
             }
         }
 

@@ -11,8 +11,8 @@ using TimeTrackingServer.Models;
 namespace TimeTrackingServer.Migrations
 {
     [DbContext(typeof(TimeTrackingDBContext))]
-    [Migration("20170915135028_enenennes")]
-    partial class enenennes
+    [Migration("20170916165929_InitalCreate")]
+    partial class InitalCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -127,6 +127,8 @@ namespace TimeTrackingServer.Migrations
                     b.Property<long?>("CostumerId");
 
                     b.Property<string>("Name");
+
+                    b.Property<float>("hourlyRate");
 
                     b.HasKey("Id");
 

@@ -127,6 +127,8 @@ namespace TimeTrackingServer.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<float>("hourlyRate");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CostumerId");

@@ -21,7 +21,7 @@ namespace TimeTrackingServer.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;User Id=SA;Password=<YourStrong!Passw0rd>;Database=TimeTrackingAppDB;Trusted_Connection=False;");
+            optionsBuilder.UseSqlServer("Server=dewebspace.de,1525;User Id=srv_tt;Password=Timetrackin123!;Database=TimeTracking;Trusted_Connection=False;");
         }
     }
 }
