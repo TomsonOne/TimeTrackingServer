@@ -1,0 +1,12 @@
+docker run -e 'ACCEPT_EULA=Y' --name AppDB -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' --cap-add SYS_PTRACE -p 1433:1433 -d microsoft/mssql-server-linux
+
+docker ps -a
+
+docker exec -it e69e056c702d "bash"
+
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourStrong!Passw0rd>'
+
+
+// Stop and Kill container
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
